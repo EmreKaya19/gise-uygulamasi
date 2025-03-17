@@ -7,6 +7,8 @@ public class Main {
         System.out.println("lütfen tc kimlik numaranızı giriiniz...");
         String tc = scanner.nextLine();
 
+tckimlik tckimlik = new tckimlik();
+tckimlik.setTcno(tc);
 
 
 
