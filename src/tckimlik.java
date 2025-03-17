@@ -3,11 +3,29 @@ import java.util.Random;
 public class tckimlik {
 private String tcno;
 private String ad;
+private int giseno;
+
+    public int getGiseno() {
+        return giseno;
+    }
+
+    public void setGiseno(int giseno) {
+        this.giseno = giseno;
+    }
 
     public String getTcno() {
         return tcno;
     }
-boolean kontrol =true;
+boolean kontrol =false;
+
+    public boolean isKontrol() {
+        return kontrol;
+    }
+
+    public void setKontrol(boolean kontrol) {
+        this.kontrol = kontrol;
+    }
+
     public void setTcno(String tcno) {
         if (tcno.length()==11){
             for (int i=0;i<tcno.length();i++){
@@ -26,7 +44,7 @@ boolean kontrol =true;
                 this.tcno = tcno;
                 Random random= new Random();
                 int rastgele= random.nextInt(100);
-                System.out.println("gise numaranız:"+rastgele);
+                giseno=rastgele;
             }
         }else {
             System.out.println("tckno 11 karakterden olusmalıdır");
